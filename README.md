@@ -10,7 +10,7 @@
 
 ## Overview :: Objects as Custom Abstractions
 
-When a scientist wants to be able to describe a complex system, they usually can't capture all the details - there's just too much going on. They need to simplify, reduce the problem down to its core, essntial features, whittling out anything that's not actually relevant. In essence, they take the big complicated problem that they started with, and replace it with a smaller, more manageable problem. This process might be referred to as _abstraction_ - hiding the true complexity of the situation, and replacing it with something that, as Einstein once put it, is "...as simple as possible, but no simpler."
+When a scientist wants to be able to describe a complex system, they usually can't capture all the details - there's just too much going on. They need to simplify, reduce the problem down to its core, essential features, whittling away anything that's not actually relevant. In essence, they take the big complicated problem that they started with, and replace it with a smaller, more manageable problem. This process might be referred to as _abstraction_ - hiding the true complexity of the situation, and replacing it with something that, as Einstein once put it, is "...as simple as possible, but no simpler."
 
 Abstraction is an enormously important tool for a programmer. The problems that he or she faces will often be very large and complex, and it can be tough to even figure out where to begin. By abstracting away the problem to its purest, most essential elements, a programmer can build a simplified representation of some piece of the puzzle - a model. From there, the programmer can continue add complexity, bit by bit, to capture larger and larger aspects of the problem.
 

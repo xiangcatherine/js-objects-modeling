@@ -1,7 +1,7 @@
 ![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
 
 ## Objectives
-- Analyze a situation and draw up a list of likely object (with properties and behaviors).
+- Analyze a situation and draw up a list of likely objects (with properties and behaviors).
 - Create an Object Literal that contains properties and methods.
 
 ## Prerequisites

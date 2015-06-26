@@ -7,6 +7,7 @@
 ## Prerequisites
 - Chapters 5 and 6 of Fundamentals
 - Defining and calling functions
+- Dot syntax for JavaScript objects
 
 ## Overview :: Objects as Custom Abstractions
 
@@ -77,6 +78,17 @@ var tv = {
 
 ```
 
+To access any of those properties or methods, we can write (using dot syntax):
+
+```javascript
+  tv.type
+    => 'plasma'
+  tv.togglePower
+    => [function]
+  tv.togglePower()
+    => ...
+```
+
 ### Lab :: Objects - Properties and Methods
 
 Let's revisit one of the examples from the previous lab - say, the computer game. Let's suppose that, in our game, you control a variety of different types of 'fighter' units.
@@ -96,7 +108,7 @@ An 'cavalry' unit has:
 - a 'health' of 1
 - a 'speed' of 3
 
-Each of these units also has a method called 'attack' which takes another character as an argument. The 'attack' method hits 50% of the time (hint: use `Math.random()` to generate a random number); when it misses, it should print out the text "MISS" and do nothing else; when it hits, it should console.log the text "HIT" and force the defender to deduct some amount ('strength') from their 'health'.
+Each of these units also has a method called 'attack' which takes another character as an argument. The 'attack' method should print the text "HIT" and force the defender to deduct some amount ('strength') from their 'health'.
 
 The strength values for each unit are:
 - infantry : 1
@@ -106,7 +118,7 @@ The strength values for each unit are:
 Let's write the code to represent this aspect of the game! Go to `lib/battlegame.js` and write your code there.
 
 Bonus:
-Write a standalone function (or a method on an object - up to you) called 'battle' which takes two units as arguments. 'battle' should pit the two characters against each other until one of them dies ('health' falls to 0 or below). The character with the higher 'speed' value gets to attack first.
+Write a standalone function (or a method on an object - up to you) called 'battle' which takes two units as arguments. 'battle' should pit the two characters against each other until one of them dies ('health' falls to 0 or below). The character with the higher 'speed' value goes first, but each unit has only a 50% chance of successfully attacking the other. Once one of the units dies, the function should return the surviving unit.
 
 ## Summary :: Objects as Custom Abstractions
 

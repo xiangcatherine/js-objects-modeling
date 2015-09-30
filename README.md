@@ -125,3 +125,9 @@ Write a standalone function (or a method on an object - up to you) called 'battl
 Now you're thinking with objects!
 
 Picking the right set of abstractions can make your problem much simpler; however, picking the wrong set can send you down a rabbit hole, so be thoughtful in what you choose. Try running your design by someone else and see what they think!
+
+[License](LICENSE)
+------------------
+
+Source code distributed under the MIT license. Text and ther assets copyright
+General Assembly, Inc., all rights reserved.

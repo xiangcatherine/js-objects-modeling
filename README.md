@@ -1,10 +1,14 @@
 ![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
 
 ## Objectives
-- Analyze a situation and draw up a list of likely objects (with properties and behaviors).
-- Create an Object Literal that contains properties and methods.
+
+- Model real-world entities.
+- Compare entity traits with entity behavior.
+- Implement these models with objects.
+- Compare attribute properties and method properties.
 
 ## Prerequisites
+
 - Chapters 5 and 6 of Fundamentals
 - Defining and calling functions
 - Dot syntax for JavaScript objects

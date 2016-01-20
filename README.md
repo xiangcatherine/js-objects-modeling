@@ -26,13 +26,11 @@ Let's consider another example : a scientist trying to come up with a set of rul
 <!-- Think-Pair-Share -->
 How might abstraction and modeling be relevant as software developers? Take a minute and discuss this with your squad.
 
-## Thinking With Objects
-
 Let's take a look at a specific example : a laptop. Suppose that we wanted to represent a laptop in our program somehow. What are the salient features of a laptop, the ones that are most important to represent?
 
 As it turns out, the features of our object that are most important depend very strongly on what our program will do and how it will be used. If our program is about selling laptops, we might be interested in things like price, brand, amount of RAM, disc space, and processor speed. However, if our program is being used in a factory, for the purpose of tracking laptops as they're being manufactured, things like price are totally irrelevant; instead, there are probably a number of other features of a laptop that are more important to model - for instance, 'which production line it was made on?'; 'who oversaw its construction?', and 'at what stage of completion is it, currently?'
 
-### Lab :: Thinking With Objects
+### Lab
 
 Break into pairs; as a group, pick one of the following examples, and individually brainstorm about a set of abstractions that might reasonably be used to represent each of the following examples. Once you're done, share your thoughts with your partner.
 

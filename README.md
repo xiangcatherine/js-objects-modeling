@@ -26,9 +26,9 @@ Let's consider another example : a scientist trying to come up with a set of rul
 <!-- Think-Pair-Share -->
 How might abstraction and modeling be relevant as software developers? Take a minute and discuss this with your squad.
 
-Let's take a look at a specific example : a laptop. Suppose that we wanted to represent a laptop in our program somehow. What are the salient features of a laptop, the ones that are most important to represent?
+Let's take a look at a specific example: a laptop. Suppose that we need to represent a laptop in an application. What attributes are most important to include in our model?
 
-As it turns out, the features of our object that are most important depend very strongly on what our program will do and how it will be used. If our program is about selling laptops, we might be interested in things like price, brand, amount of RAM, disc space, and processor speed. However, if our program is being used in a factory, for the purpose of tracking laptops as they're being manufactured, things like price are totally irrelevant; instead, there are probably a number of other features of a laptop that are more important to model - for instance, 'which production line it was made on?'; 'who oversaw its construction?', and 'at what stage of completion is it, currently?'
+As it turns out, the answer to that question depends heavily on what the application will do and how it will be used. If the application is for selling laptops, we might be pick attributes like sale price, brand, amount of RAM, disc space, and processor speed. However, if the application is for factories, e.g. tracking laptops as they're being manufactured, things like sale price are irrelevant; instead, we might want our model to include the production line where the laptop was assembled, or the laptop's current stage of completion.
 
 ### Lab
 

@@ -102,11 +102,11 @@ In addition to the properties above, each of these units should also be able to 
 ##### Bonus Challenge:
 Write a stand-alone function called `battle` which takes two units as arguments. The two units should attack each other until one of them dies (`health` falls to 0 or below). The character with the higher `speed` value goes first, but each unit has only a 50% chance of successfully attacking the other. Once one of the units dies, the function should return the surviving unit.
 
-## Summary :: Objects as Custom Abstractions
+## Summary
 
-Now you're thinking with objects!
+Now you're thinking with abstraction!
 
-Picking the right set of abstractions can make your problem much simpler; however, picking the wrong set can send you down a rabbit hole, so be thoughtful in what you choose. Try running your design by someone else and see what they think!
+Picking the right model(s) can make your problem much simpler; however, picking the wrong model(s) can send you down a rabbit hole, so be thoughtful in what you choose. Try running your models by someone else and see what they think!
 
 [License](LICENSE)
 ------------------

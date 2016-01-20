@@ -46,7 +46,7 @@ In your squads, pick one of the following examples and individually brainstorm a
 
 - A recipe website; when users change the number of dinner guests, the site adjusts ingredient quantities accordingly.
 
-## Objects - Properties and Methods
+## Modeling in JavaScript
 
 The way that JavaScript objects represent the attributes and behaviors of our chosen abstractions are through **properties** and **methods**. Properties are something you've already seen - keys, which correspond to some value. For instance, if we had an object representing a crayon, and it had a 'color', we might represent that like so:
 

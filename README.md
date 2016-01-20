@@ -32,7 +32,7 @@ As it turns out, the answer to that question depends heavily on what the applica
 
 ### Lab
 
-Break into pairs; as a group, pick one of the following examples, and individually brainstorm about a set of abstractions that might reasonably be used to represent each of the following examples. Once you're done, share your thoughts with your partner.
+In your squads, pick one of the following examples and individually brainstorm about abstractions and models you might use. Once you're done, discuss your answers as a squad.
 
 - Reporting software that analyzes the performance of different members of a sales team.
 
@@ -40,12 +40,11 @@ Break into pairs; as a group, pick one of the following examples, and individual
 
 - A hotel website that allows users to search for and manage reservations, which includes making changes to the arrival date and room type.
 
-- An ecommerce platform that allows users to purchase products and pay for them by credit card.
+- An e-commerce platform that allows users to purchase products and pay for them by credit card.
 
 - A platform for watching training videos (e.g. as part of a recertification process) and answering questions about them.
 
-- A recipe website; when users change the number of dinner guests, the site adjusts each recipes accordingly.
-
+- A recipe website; when users change the number of dinner guests, the site adjusts ingredient quantities accordingly.
 
 ## Objects - Properties and Methods
 

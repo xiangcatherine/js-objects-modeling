@@ -13,13 +13,18 @@
 - Defining and calling functions
 - Dot syntax for JavaScript objects
 
-## Overview :: Objects as Custom Abstractions
+## Abstraction and Modeling
 
-When a scientist wants to be able to describe a complex system, they usually can't capture all the details - there's just too much going on. They need to simplify, reduce the problem down to its core, essential features, whittling away anything that's not actually relevant. In essence, they take the big complicated problem that they started with, and replace it with a smaller, more manageable problem. This process might be referred to as _abstraction_ - hiding the true complexity of the situation, and replacing it with something that, as Einstein once put it, is "...as simple as possible, but no simpler."
+The world is full of complex systems. Take weather, for example.
 
-Abstraction is an enormously important tool for a programmer. The problems that he or she faces will often be very large and complex, and it can be tough to even figure out where to begin. By abstracting away the problem to its purest, most essential elements, a programmer can build a simplified representation of some piece of the puzzle - a model. From there, the programmer can continue add complexity, bit by bit, to capture larger and larger aspects of the problem.
+![Weather Forecast](https://upload.wikimedia.org/wikipedia/commons/c/c0/NOAA_Wavewatch_III_Sample_Forecast.gif)
 
-Along with functions, one of the most important tools for abstraction in JavaScript is the object. Since most things in the real world (say, a car) can be described as combinations of attributes (make, model, year) and behaviors (drive, turn, brake, park), JavaScript objects (which can represent both of those things) can be used as simple models, representing stripped-down abstractions of real-world things.
+There's a ton of information we could record about the weather. Yet when you read the weather report in the morning, all of that information is distilled down to a handful of numbers: 34 degrees fahrenheit, 20% chance of precipitation, 4 degree windchill... <!-- Stop & Jot --> Why do you think that is?
+
+Let's consider another example : a scientist trying to come up with a set of rules to describe how something behaves. To make these rules, the scientist must typically make many simplifying assumptions - otherwise, the rules get too complicated. The process of figuring out which part of the problem to keep (and which ones to ignore or assume away) is called _abstraction_. By abstracting away irrelevant information, the scientist can then construct a _model_, a simplified representation of the original problem.
+
+<!-- Think-Pair-Share -->
+How might abstraction and modeling be relevant as software developers? Take a minute and discuss this with your squad.
 
 ## Thinking With Objects
 

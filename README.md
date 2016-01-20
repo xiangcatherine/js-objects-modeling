@@ -84,36 +84,23 @@ In addition, there are a number of other features of the TV that might interest 
 
 How could we model this in JavaScript? In your squads, take five minutes and write out a JavaScript object that represents all of the features and behaviors of a TV listed above.
 
-### Lab :: Objects - Properties and Methods
+### Lab
+>If you haven't already, please fork and clone this repo.
 
-Let's revisit one of the examples from the previous lab - say, the computer game. Let's suppose that, in our game, you control a variety of different types of 'fighter' units.
+Let's revisit one of the examples from the previous lab - say, the computer game. Suppose that, in this game, you control one of three different military units, with the following properties:
 
-Infantry
-An 'infanty' unit has:
- - a 'health' of 2
- - a 'speed' of 2
+| Unit | Health | Speed | Strength |
+|:-:|:-:|:-:|:-:|
+| Infantry | 2 | 2 | 1 |
+| Artillery | 2 | 1 | 3 |
+| Cavalry | 1 | 3 | 2 |
 
-Artillery
-An 'artillery' unit has:
-- a 'health' of 2
-- a 'speed' of 1
+You'll be writing the code necessary to model out each of these three units inside `lib/battlegame.js`.
 
-Cavalry
-An 'cavalry' unit has:
-- a 'health' of 1
-- a 'speed' of 3
+In addition to the properties above, each of these units should also be able to attack other units via an `attack` method that takes the "target" unit as an argument. The `attack` method should print the text `"HIT"` and force the defender to take damage (i.e. to deduct the `strength` of the attacker from their `health`).
 
-Each of these units also has a method called 'attack' which takes another character as an argument. The 'attack' method should print the text "HIT" and force the defender to deduct some amount ('strength') from their 'health'.
-
-The strength values for each unit are:
-- infantry : 1
-- artillery : 3
-- cavalry : 2
-
-Let's write the code to represent this aspect of the game! Go to `lib/battlegame.js` and write your code there.
-
-Bonus:
-Write a standalone function (or a method on an object - up to you) called 'battle' which takes two units as arguments. 'battle' should pit the two characters against each other until one of them dies ('health' falls to 0 or below). The character with the higher 'speed' value goes first, but each unit has only a 50% chance of successfully attacking the other. Once one of the units dies, the function should return the surviving unit.
+##### Bonus Challenge:
+Write a stand-alone function called `battle` which takes two units as arguments. The two units should attack each other until one of them dies (`health` falls to 0 or below). The character with the higher `speed` value goes first, but each unit has only a 50% chance of successfully attacking the other. Once one of the units dies, the function should return the surviving unit.
 
 ## Summary :: Objects as Custom Abstractions
 

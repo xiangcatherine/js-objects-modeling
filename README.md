@@ -19,7 +19,9 @@ The world is full of complex systems. Take weather, for example.
 
 ![Weather Forecast](https://upload.wikimedia.org/wikipedia/commons/c/c0/NOAA_Wavewatch_III_Sample_Forecast.gif)
 
-There's a ton of information we could record about the weather. Yet when you read the weather report in the morning, all of that information is distilled down to a handful of numbers: 34 degrees fahrenheit, 20% chance of precipitation, 4 degree windchill... <!-- Stop & Jot --> Why do you think that is?
+There's a ton of information we could record about the weather. Yet when you read the weather report in the morning, all of that information is distilled down to a handful of numbers: 34 degrees fahrenheit, 20% chance of precipitation, 4 degree windchill... 
+<!-- Stop & Jot --> 
+Why do you think that might be?
 
 Let's consider another example : a scientist trying to come up with a set of rules to describe how something behaves. To make these rules, the scientist must typically make many simplifying assumptions - otherwise, the rules get too complicated. The process of figuring out which part of the problem to keep (and which ones to ignore or assume away) is called _abstraction_. By abstracting away irrelevant information, the scientist can then construct a _model_, a simplified representation of the original problem.
 

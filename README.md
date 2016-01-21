@@ -13,23 +13,28 @@
 - Defining and calling functions
 - Dot syntax for JavaScript objects
 
-## Overview :: Objects as Custom Abstractions
+## Abstraction and Modeling
 
-When a scientist wants to be able to describe a complex system, they usually can't capture all the details - there's just too much going on. They need to simplify, reduce the problem down to its core, essential features, whittling away anything that's not actually relevant. In essence, they take the big complicated problem that they started with, and replace it with a smaller, more manageable problem. This process might be referred to as _abstraction_ - hiding the true complexity of the situation, and replacing it with something that, as Einstein once put it, is "...as simple as possible, but no simpler."
+The world is full of complex systems. Take weather, for example.
 
-Abstraction is an enormously important tool for a programmer. The problems that he or she faces will often be very large and complex, and it can be tough to even figure out where to begin. By abstracting away the problem to its purest, most essential elements, a programmer can build a simplified representation of some piece of the puzzle - a model. From there, the programmer can continue add complexity, bit by bit, to capture larger and larger aspects of the problem.
+![Weather Forecast](https://upload.wikimedia.org/wikipedia/commons/c/c0/NOAA_Wavewatch_III_Sample_Forecast.gif)
 
-Along with functions, one of the most important tools for abstraction in JavaScript is the object. Since most things in the real world (say, a car) can be described as combinations of attributes (make, model, year) and behaviors (drive, turn, brake, park), JavaScript objects (which can represent both of those things) can be used as simple models, representing stripped-down abstractions of real-world things.
+There's a ton of information we could record about the weather. Yet when you read the weather report in the morning, all of that information is distilled down to a handful of numbers: 34 degrees fahrenheit, 20% chance of precipitation, 4 degree windchill... 
+<!-- Stop & Jot --> 
+Why do you think that might be?
 
-## Thinking With Objects
+Let's consider another example : a scientist trying to come up with a set of rules to describe how something behaves. To make these rules, the scientist must typically make many simplifying assumptions - otherwise, the rules get too complicated. The process of figuring out which part of the problem to keep (and which ones to ignore or assume away) is called _abstraction_. By abstracting away irrelevant information, the scientist can then construct a _model_, a simplified representation of the original problem.
 
-Let's take a look at a specific example : a laptop. Suppose that we wanted to represent a laptop in our program somehow. What are the salient features of a laptop, the ones that are most important to represent?
+<!-- Think-Pair-Share -->
+How might abstraction and modeling be relevant as software developers? Take a minute and discuss this with your squad.
 
-As it turns out, the features of our object that are most important depend very strongly on what our program will do and how it will be used. If our program is about selling laptops, we might be interested in things like price, brand, amount of RAM, disc space, and processor speed. However, if our program is being used in a factory, for the purpose of tracking laptops as they're being manufactured, things like price are totally irrelevant; instead, there are probably a number of other features of a laptop that are more important to model - for instance, 'which production line it was made on?'; 'who oversaw its construction?', and 'at what stage of completion is it, currently?'
+Let's take a look at a specific example: a laptop. Suppose that we need to represent a laptop in an application. What attributes are most important to include in our model?
 
-### Lab :: Thinking With Objects
+As it turns out, the answer to that question depends heavily on what the application will do and how it will be used. If the application is for selling laptops, we might be pick attributes like sale price, brand, amount of RAM, disc space, and processor speed. However, if the application is for factories, e.g. tracking laptops as they're being manufactured, things like sale price are irrelevant; instead, we might want our model to include the production line where the laptop was assembled, or the laptop's current stage of completion.
 
-Break into pairs; as a group, pick one of the following examples, and individually brainstorm about a set of abstractions that might reasonably be used to represent each of the following examples. Once you're done, share your thoughts with your partner.
+### Lab
+
+In your squads, pick one of the following examples and individually brainstorm about abstractions and models you might use. Once you're done, discuss your answers as a squad.
 
 - Reporting software that analyzes the performance of different members of a sales team.
 
@@ -37,27 +42,40 @@ Break into pairs; as a group, pick one of the following examples, and individual
 
 - A hotel website that allows users to search for and manage reservations, which includes making changes to the arrival date and room type.
 
-- An ecommerce platform that allows users to purchase products and pay for them by credit card.
+- An e-commerce platform that allows users to purchase products and pay for them by credit card.
 
 - A platform for watching training videos (e.g. as part of a recertification process) and answering questions about them.
 
-- A recipe website; when users change the number of dinner guests, the site adjusts each recipes accordingly.
+- A recipe website; when users change the number of dinner guests, the site adjusts ingredient quantities accordingly.
 
+## Modeling in JavaScript
 
-## Objects - Properties and Methods
+Let's think about how might we construct a model in JavaScript as part of an application. Models can be as simple as a single number -- for instance, a day's weather can be modeled as 'temperature' or  'inches of snow expected'. Other things, such as lists of similar items, are typically modeled by arrays; since the items are all similar, an index is sufficient to distinguish them.
+```
+let beatles = ['John', 'Paul', 'George', 'Ringo'];
+```
+> Note that we're also abstracting away each Beatle as a String - at the moment, we're only interested in their first names.
 
-The way that JavaScript objects represent the attributes and behaviors of our chosen abstractions are through **properties** and **methods**. Properties are something you've already seen - keys, which correspond to some value. For instance, if we had an object representing a crayon, and it had a 'color', we might represent that like so:
+Most of the time, though, what we want to model has **multiple attributes**, often of different types: for instance, a car might have a make (String), a release year (Number), and a mileage (Number). Because these attributes are different, we also probably want to refer to them using descriptive names. For this kind of use case, an Object is the best fit, since its _properties_ are key-value pairs with String keys. Objects can also have properties that hold functions, called _methods_, and these can stand in neatly for any behaviors that we might want our model to have.
 
+Suppose we needed to model a single crayon in JavaScript. We might come up with something like this.
 ```javascript
-{
-  color: 'blue'
+let crayon = {
+  color: 'blue',
+  lengthInCM: 8,
+  getUsedUp: function(){
+    this.lengthInCM -= 0.5;
+  }
 }
 ```
-> We'd also probably want to put it in a variable so that we can refer to it later.
 
-Methods are just a special type of property - specifically, properties whose values are functions. Because they are functions, methods can execute code whenever they get called. This is a very effective proxy for something's behavior.
+As you can see, `crayon` has two ordinary properties, (`color` and `lengthInCM`); these map to attributes of the crayon that (presumably) are relevant to our application. In addition, it also has a method called `getUsedUp`, which corresponds with a behavior that real crayons exhibit - getting shorter as they get used.
 
-Let's consider how we might represent a TV using a JavaScript object. For this example, let's assume that we're only concerned with using the TV, not selling it or anything like that. When we interact with a TV, there's a short list of things that we typically do:
+> Just as a refresher, if we want to access `crayon`'s `color` property, we can write `crayon.color`. Similarly, if we want to access the function stored inside the `getUsedUp` property, we can write `crayon.getUsedUp`. Lastly, if we want to treat that function as a method and invoke it from the object, we can write `crayon.getUsedUp()`.
+
+Now let's consider how we might model a TV. For this example, let's assume that we're only concerned with using the TV, not selling it or anything like that.
+
+When we interact with a TV, there's a short list of things that we typically do:
 - turn it on/off (toggle power)
 - increase or decrease the volume
 - increase or decrease the channel
@@ -66,69 +84,46 @@ In addition, there are a number of other features of the TV that might interest 
 - what's the resolution?
 - how much power does it consume?
 
-If we wanted to represent all of these things in a JavaScript Object, and keep it in a variable called `tv`, we might write something like this:
+How could we model this in JavaScript? In your squads, take five minutes and write out a JavaScript object that represents all of the features and behaviors of a TV listed above.
 
-```javascript
+### Lab
 
-var tv = {
-    type: 'plasma',
-    resolution: '1080i',
-    powerConsumption: '150W',
-    togglePower: function() { /* Some code here. */ },
-    changeVolume: function() { /* Some code here. */ },
-    changeChannel: function() { /* Some code here. */ },
-    goToChannel: function(channelNumber) { /* Some code here. */ }
-};
+Let's revisit one of the examples from the previous lab - say, the recipe website. Suppose that after careful research, we've determined that the following things must be true about the application.
 
-```
+A recipe must have:
+- a name
+- an author
+- a list of steps
+- a list of ingredient quantities
+- a number of servings that the recipe yields
 
-To access any of those properties or methods, we can write (using dot syntax):
+An ingredient quantity must have:
+- an ingredient
+- a unit of measure (e.g. teaspoons)
+- a quantity
+- notes (e.g. chopped fine)
 
-```javascript
-  tv.type
-    => 'plasma'
-  tv.togglePower
-    => [function]
-  tv.togglePower()
-    => ...
-```
+An ingredient must have:
+- a name
+- a value indicating whether or not the ingredient is in your fridge/pantry
 
-### Lab :: Objects - Properties and Methods
+Additionally, the recipe should be able to:
+- print a list of its ingredients, in the following format:
+   > 1 cup of flour
 
-Let's revisit one of the examples from the previous lab - say, the computer game. Let's suppose that, in our game, you control a variety of different types of 'fighter' units.
+   > 2 tablespoons of butter
 
-Infantry
-An 'infanty' unit has:
- - a 'health' of 2
- - a 'speed' of 2
+   > ...
 
-Artillery
-An 'artillery' unit has:
-- a 'health' of 2
-- a 'speed' of 1
+- indicate whether the user needs to buy more ingredients, or whether the recipe can be prepared as-is
 
-Cavalry
-An 'cavalry' unit has:
-- a 'health' of 1
-- a 'speed' of 3
+How could we actually implement this in JavaScript? In your squads, try to come up with a way to represent the abstractions given above using the tools we've learned about so far (basic types like numbers, strings, and booleans; reference types like arrays, objects, and functions). When you finish, we'll discuss our answers as a class.
 
-Each of these units also has a method called 'attack' which takes another character as an argument. The 'attack' method should print the text "HIT" and force the defender to deduct some amount ('strength') from their 'health'.
+## Summary
 
-The strength values for each unit are:
-- infantry : 1
-- artillery : 3
-- cavalry : 2
+Now you're thinking with abstraction!
 
-Let's write the code to represent this aspect of the game! Go to `lib/battlegame.js` and write your code there.
-
-Bonus:
-Write a standalone function (or a method on an object - up to you) called 'battle' which takes two units as arguments. 'battle' should pit the two characters against each other until one of them dies ('health' falls to 0 or below). The character with the higher 'speed' value goes first, but each unit has only a 50% chance of successfully attacking the other. Once one of the units dies, the function should return the surviving unit.
-
-## Summary :: Objects as Custom Abstractions
-
-Now you're thinking with objects!
-
-Picking the right set of abstractions can make your problem much simpler; however, picking the wrong set can send you down a rabbit hole, so be thoughtful in what you choose. Try running your design by someone else and see what they think!
+Picking the right model(s) can make your problem much simpler; however, picking the wrong model(s) can send you down a rabbit hole, so be thoughtful in what you choose. Try running your models by someone else and see what they think!
 
 [License](LICENSE)
 ------------------

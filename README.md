@@ -85,22 +85,37 @@ In addition, there are a number of other features of the TV that might interest 
 How could we model this in JavaScript? In your squads, take five minutes and write out a JavaScript object that represents all of the features and behaviors of a TV listed above.
 
 ### Lab
->If you haven't already, please fork and clone this repo.
 
-Let's revisit one of the examples from the previous lab - say, the computer game. Suppose that, in this game, you control one of three different military units, with the following properties:
+Let's revisit one of the examples from the previous lab - say, the recipe website. Suppose that after careful research, we've determined that the following things must be true about the application.
 
-| Unit | Health | Speed | Strength |
-|:-:|:-:|:-:|:-:|
-| Infantry | 2 | 2 | 1 |
-| Artillery | 2 | 1 | 3 |
-| Cavalry | 1 | 3 | 2 |
+A recipe must have:
+- a name
+- an author
+- a list of steps
+- a list of ingredient quantities
+- a number of servings that the recipe yields
 
-You'll be writing the code necessary to model out each of these three units inside `lib/battlegame.js`.
+An ingredient quantity must have:
+- an ingredient
+- a unit of measure (e.g. teaspoons)
+- a quantity
+- notes (e.g. chopped fine)
 
-In addition to the properties above, each of these units should also be able to attack other units via an `attack` method that takes the "target" unit as an argument. The `attack` method should print the text `"HIT"` and force the defender to take damage (i.e. to deduct the `strength` of the attacker from their `health`).
+An ingredient must have:
+- a name
+- a value indicating whether or not the ingredient is in your fridge/pantry
 
-##### Bonus Challenge:
-Write a stand-alone function called `battle` which takes two units as arguments. The two units should attack each other until one of them dies (`health` falls to 0 or below). The character with the higher `speed` value goes first, but each unit has only a 50% chance of successfully attacking the other. Once one of the units dies, the function should return the surviving unit.
+Additionally, the recipe should be able to:
+- print a list of its ingredients, in the following format:
+   > 1 cup of flour
+
+   > 2 tablespoons of butter
+
+   > ...
+
+- indicate whether the user needs to buy more ingredients, or whether the recipe can be prepared as-is
+
+How could we actually implement this in JavaScript? In your squads, try to come up with a way to represent the abstractions given above using the tools we've learned about so far (basic types like numbers, strings, and booleans; reference types like arrays, objects, and functions). When you finish, we'll discuss our answers as a class.
 
 ## Summary
 

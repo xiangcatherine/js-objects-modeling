@@ -1,7 +1,11 @@
 {
-  "name": "ga-wdi-boston-node-template",
+  "name": "js-objects-intro-08",
   "version": "0.0.1",
-  "private": true,
+  "description": "Introduction to JavaScript Objects",
+  "scripts": {
+    "test": "grunt jasmine-nodejs"
+  },
+  "author": "Matt Brendzel",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
@@ -17,5 +21,17 @@
     "grunt-open": "^0.2.3",
     "load-grunt-config": "^0.19.1",
     "time-grunt": "^1.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ga-wdi-boston/js-objects-intro-08.git"
+  },
+  "keywords": [
+    "javascript",
+    "objects"
+  ],
+  "bugs": {
+    "url": "https://github.com/ga-wdi-boston/js-objects-intro-08/issues"
+  },
+  "homepage": "https://github.com/ga-wdi-boston/js-objects-intro-08#readme"
 }

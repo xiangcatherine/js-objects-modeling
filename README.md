@@ -84,11 +84,11 @@ In addition, there are a number of other features of the TV that might interest 
 - what's the resolution?
 - how much power does it consume?
 
-How could we model this in JavaScript? In your squads, take five minutes and write out a JavaScript object that represents all of the features and behaviors of a TV listed above.
+How could we model this in JavaScript? In your squads, take ten minutes and write out a JavaScript object that represents all of the features and behaviors of a TV listed above.
 
 ### Lab
 
-Let's revisit one of the examples from the previous lab - say, the recipe website. Suppose that after careful research, we've determined that the following things must be true about the application.
+Say we are building a recipe website. Suppose that after careful research, we've determined that the following things must be true about the application.
 
 A recipe must have:
 - a name

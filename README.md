@@ -41,7 +41,7 @@ simplified representation of the original problem.
 How might abstraction and modeling be relevant as software developers? Take a
 minute and discuss this with your squad.
 
-Let's take a look at a specific example: a laptop. Suppose that we need to
+Let's take a look at a specific example: a Laptop. Suppose that we need to
 represent a laptop in an application. What attributes are most important to
 include in our model?
 
@@ -69,7 +69,7 @@ general and simulates a battle based on his or her commands.
 includes making changes to the arrival date and room type.
 
 -   An e-commerce platform that allows users to purchase products and pay for them
-by credit card.
+ by credit card.
 
 -   A platform for watching training videos (e.g. as part of a recertification
 process) and answering questions about them.

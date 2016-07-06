@@ -2,18 +2,17 @@
 
 # JS Objects
 
+## Prerequisites
+
+-   Defining and calling functions
+-   Dot syntax for JavaScript objects
+
 ## Objectives
 
 -   Model real-world entities.
 -   Compare entity traits with entity behavior.
 -   Implement these models with objects.
 -   Compare attribute properties and method properties.
-
-## Prerequisites
-
--   Chapters 5 and 6 of Fundamentals
--   Defining and calling functions
--   Dot syntax for JavaScript objects
 
 ## Abstraction and Modeling
 

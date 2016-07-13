@@ -11,7 +11,7 @@
 
 -   Model real-world entities.
 -   Compare entity traits with entity behavior.
--   Implement these models with objects.
+-   Implement these models with JavaScript objects.
 -   Compare attribute properties and method properties.
 
 ## Preparation
@@ -35,17 +35,11 @@ precipitation, 4 degree windchill...
 <!-- Stop & Jot -->
 Why do you think that might be?
 
-Let's consider another example : a scientist trying to come up with a set of
-rules to describe how something behaves. To make these rules, the scientist must
-typically make many simplifying assumptions - otherwise, the rules get too
-complicated. The process of figuring out which part of the problem to keep (and
-which ones to ignore or assume away) is called _abstraction_. By abstracting
-away irrelevant information, the scientist can then construct a _model_, a
-simplified representation of the original problem.
-
 <!-- Think-Pair-Share -->
 How might abstraction and modeling be relevant as software developers? Take a
 minute and discuss this with your squad.
+
+### Brainstorm
 
 Let's take a look at a specific example: a Laptop. Suppose that we need to
 represent a laptop in an application. What attributes are most important to
@@ -59,7 +53,7 @@ tracking laptops as they're being manufactured, things like sale price are
 irrelevant; instead, we might want our model to include the production line
 where the laptop was assembled, or the laptop's current stage of completion.
 
-### Lab
+### Lab: Brainstorm
 
 In your squads, pick one of the following examples and individually brainstorm
 about abstractions and models you might use. Once you're done, discuss your
@@ -132,6 +126,8 @@ the `getUsedUp` property, we can write `crayon.getUsedUp`. Lastly, if we want to
 treat that function as a method and invoke it from the object, we can write
 `crayon.getUsedUp()`.
 
+### Code Along: Television
+
 Now let's consider how we might model a TV. For this example, let's assume that
 we're only concerned with using the TV, not selling it or anything like that.
 
@@ -177,7 +173,7 @@ An ingredient must have:
 -   a name
 -   a value indicating whether or not the ingredient is in your fridge/pantry
 
-Additionally, the recipe should be able to:
+Additionally, as a bonus, the recipe should be able to:
 
 -   print a list of its ingredients, in the following format:
 

@@ -39,7 +39,7 @@ Why do you think that might be?
 How might abstraction and modeling be relevant as software developers? Take a
 minute and discuss this with your squad.
 
-### Brainstorm
+### Discussion 
 
 Let's take a look at a specific example: a Laptop. Suppose that we need to
 represent a laptop in an application. What attributes are most important to

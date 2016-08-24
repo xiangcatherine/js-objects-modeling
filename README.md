@@ -1,6 +1,6 @@
 ![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
 
-# JS Objects
+# JS Objects Modeling
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ Why do you think that might be?
 How might abstraction and modeling be relevant as software developers? Take a
 minute and discuss this with your squad.
 
-### Discussion 
+### Discussion
 
 Let's take a look at a specific example: a Laptop. Suppose that we need to
 represent a laptop in an application. What attributes are most important to
@@ -69,13 +69,10 @@ general and simulates a battle based on his or her commands.
 includes making changes to the arrival date and room type.
 
 -   An e-commerce platform that allows users to purchase products and pay for them
- by credit card.
+by credit card.
 
 -   A platform for watching training videos (e.g. as part of a recertification
 process) and answering questions about them.
-
--   A recipe website; when users change the number of dinner guests, the site
-adjusts ingredient quantities accordingly.
 
 ## Modeling in JavaScript
 
@@ -93,13 +90,13 @@ let beatles = ['John', 'Paul', 'George', 'Ringo'];
 we're only interested in their first names.
 
 Most of the time, though, what we want to model has **multiple attributes**,
-often of different types: for instance, a car might have a make (String), a
-release year (Number), and a mileage (Number). Because these attributes are
-different, we also probably want to refer to them using descriptive names. For
-this kind of use case, an Object is the best fit, since its _properties_ are
-key-value pairs with String keys. Objects can also have properties that hold
-functions, called _methods_, and these can stand in neatly for any behaviors
-that we might want our model to have.
+often of different types: for instance, a car might have a make (String), model
+(String), a release year (Number), and a mileage (Number). Because these
+attributes are different, we also probably want to refer to them using
+descriptive names. For this kind of use case, an Object is the best fit, since
+its _properties_ are key-value pairs with String keys. Objects can also have
+properties that hold functions, called _methods_, and these can stand in neatly
+for any behaviors that we might want our model to have.
 
 Suppose we needed to model a single crayon in JavaScript. We might come up with
 something like this.
@@ -109,7 +106,7 @@ let crayon = {
   color: 'blue',
   lengthInCM: 8,
   getUsedUp: function(){
-    this.lengthInCM -= 0.5;
+    crayon.lengthInCM -= 0.5;
   }
 };
 ```
@@ -125,6 +122,24 @@ write `crayon.color`. Similarly, if we want to access the function stored inside
 the `getUsedUp` property, we can write `crayon.getUsedUp`. Lastly, if we want to
 treat that function as a method and invoke it from the object, we can write
 `crayon.getUsedUp()`.
+
+Back to our car example. Since we are altering the instance of our car object,
+we can use a keyword that helps us alter properties of an object without having
+to have the object name.
+
+```js
+let car = {
+  make: 'Toyota',
+  model: '4Runner',
+  releaseYear: 1992,
+  milage: 78062,
+  addMilage: function() {
+    this.milage += 50;
+  },
+};
+```
+
+_more on `this` tomorrow_
 
 ### Code Along: Television
 

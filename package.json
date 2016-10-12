@@ -1,5 +1,5 @@
 {
-  "name": "ga-wdi-boston-js-objects-modeling",
+  "name": "ga-wdi-boston.js-objects-modeling",
   "version": "0.0.1",
   "private": true,
   "license": "MIT",
@@ -15,7 +15,7 @@
     "grunt-mocha-test": "^0.12.7",
     "grunt-nodemon": "^0.4.2",
     "load-grunt-config": "^0.19.2",
-    "mocha": "^3.0.2",
+    "mocha": "^3.1.2",
     "time-grunt": "^1.4.0"
   }
 }

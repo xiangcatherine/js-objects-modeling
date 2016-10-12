@@ -54,7 +54,7 @@ irrelevant; instead, we might want our model to include the production line
 where the laptop was assembled, or the laptop's current stage of completion.
 
 In order to decide what attributes we need to model, we use user stories, which
-we'll talk about in more depth as we introduce the first project. 
+we'll talk about in more depth as we introduce the first project.
 
 ### Lab: Brainstorm
 
@@ -105,13 +105,13 @@ Suppose we needed to model a single crayon in JavaScript. We might come up with
 something like this.
 
 ```javascript
-let crayon = {
-  color: 'blue',
-  lengthInCM: 8,
-  getUsedUp: function(){
-    crayon.lengthInCM -= 0.5;
-  }
-};
+let crayon = new Object();
+
+crayon.color = 'blue';
+crayon.lengthInCM = 8;
+crayon.getUsedUp = function() {
+  crayon.lengthInCM -= 0.5;
+}
 ```
 
 As you can see, `crayon` has two ordinary traits, (which we call properties),

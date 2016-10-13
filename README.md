@@ -53,6 +53,9 @@ tracking laptops as they're being manufactured, things like sale price are
 irrelevant; instead, we might want our model to include the production line
 where the laptop was assembled, or the laptop's current stage of completion.
 
+In order to decide what attributes we need to model, we use user stories, which
+we'll talk about in more depth as we introduce the first project.
+
 ### Lab: Brainstorm
 
 In your squads, pick one of the following examples and individually brainstorm
@@ -74,7 +77,7 @@ by credit card.
 -   A platform for watching training videos (e.g. as part of a recertification
 process) and answering questions about them.
 
-## Modeling in JavaScript
+## Demo: Modeling in JavaScript
 
 Let's think about how might we construct a model in JavaScript as part of an
 application. Models can be as simple as a single number -- for instance, a day's
@@ -83,11 +86,11 @@ things, such as lists of similar items, are typically modeled by arrays; since
 the items are all similar, an index is sufficient to distinguish them.
 
 ```javascript
-let beatles = ['John', 'Paul', 'George', 'Ringo'];
+let crayons = ['blue', 'green', 'orange', 'yellow'];
 ```
 
--   Note that we're also abstracting away each Beatle as a String - at the moment,
-we're only interested in their first names.
+-   Note that we're also abstracting away each crayon as a String - at the moment,
+we're only interested in their colors.
 
 Most of the time, though, what we want to model has **multiple attributes**,
 often of different types: for instance, a car might have a make (String), model
@@ -102,20 +105,18 @@ Suppose we needed to model a single crayon in JavaScript. We might come up with
 something like this.
 
 ```javascript
-let crayon = {
-  color: 'blue',
-  lengthInCM: 8,
-  getUsedUp: function(){
-    crayon.lengthInCM -= 0.5;
-  }
-};
+let crayon = new Object();
+
+crayon.color = 'blue';
+crayon.lengthInCM = 8;
+crayon.getUsedUp = function() {
+  crayon.lengthInCM -= 0.5;
+}
 ```
 
-As you can see, `crayon` has two ordinary properties, (`color` and
-`lengthInCM`); these map to attributes of the crayon that (presumably) are
-relevant to our application. In addition, it also has a method called
-`getUsedUp`, which corresponds with a behavior that real crayons exhibit -
-getting shorter as they get used.
+As you can see, `crayon` has two ordinary traits, (which we call properties),
+(`color` and `lengthInCM`); these map to attributes of the crayon that (presumably) are
+relevant to our application. In addition, it also has a method called `getUsedUp`, which corresponds with a behavior that real crayons exhibit - getting shorter as they get used.
 
 -   Just as a refresher, if we want to access `crayon`'s `color` property, we can
 write `crayon.color`. Similarly, if we want to access the function stored inside
@@ -139,7 +140,7 @@ let car = {
 };
 ```
 
-_more on `this` tomorrow_
+_more on `this` later_
 
 ### Code Along: Television
 

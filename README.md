@@ -85,9 +85,7 @@ weather can be modeled as 'temperature' or  'inches of snow expected'. Other
 things, such as lists of similar items, are typically modeled by arrays; since
 the items are all similar, an index is sufficient to distinguish them.
 
-```javascript
-let crayons = ['blue', 'green', 'orange', 'yellow'];
-```
+[Model of an array of crayons](lib/crayons.js)
 
 -   Note that we're also abstracting away each crayon as a String - at the moment,
 we're only interested in their colors.
@@ -104,15 +102,7 @@ for any behaviors that we might want our model to have.
 Suppose we needed to model a single crayon in JavaScript. We might come up with
 something like this.
 
-```javascript
-let crayon = new Object();
-
-crayon.color = 'blue';
-crayon.lengthInCM = 8;
-crayon.getUsedUp = function() {
-  crayon.lengthInCM -= 0.5;
-}
-```
+[Model a single crayon in JavaScript](lib/crayon.js)
 
 As you can see, `crayon` has two ordinary traits, (which we call properties),
 (`color` and `lengthInCM`); these map to attributes of the crayon that (presumably) are
@@ -126,19 +116,9 @@ treat that function as a method and invoke it from the object, we can write
 
 Back to our car example. Since we are altering the instance of our car object,
 we can use a keyword that helps us alter properties of an object without having
-to have the object name.
+to have the object name:
 
-```js
-let car = {
-  make: 'Toyota',
-  model: '4Runner',
-  releaseYear: 1992,
-  mileage: 78062,
-  addMileage: function() {
-    this.mileage += 50;
-  },
-};
-```
+[Model a car object](lib/car.js)
 
 _more on `this` later_
 

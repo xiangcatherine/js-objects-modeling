@@ -48,7 +48,7 @@ minute and discuss this with your squad.</summary>
 We can use abstraction to represent real-world entities when we write software. This allows us to hide complex systems underneath easy to grasp objects and models. 
 </details>
 
-
+<br />
 Think about the weather report that you are given by the weather lady. She gives you the temperature in your city, if it's going to rain or snow, level of precipitation, and the wind speed. This model of the weather system hides the complexity that is behind these measurements. 
 
 A **model** is a simplified or partial representation of the real thing. Models are based on a real entity, and are used to represent the real entity in a system. Modeling is great for planning, designing, discussing, and understanding a system.
@@ -123,22 +123,22 @@ As you can see, `crayon` has two ordinary traits, (which we call properties),
 relevant to our application. In addition, it also has a method called `getUsedUp`, which corresponds with a behavior that real crayons exhibit: getting shorter as they get used.
 
 -   Let's do a quick refresher on object dot notation:
-<details><summary>What do we write if we want to access a `crayon`'s `color` property?</summary>
+<details><summary>What do we write if we want to access a crayon's <code>color</code> property?</summary>
 we can
-write `crayon.color`.
+write <code>crayon.color</code>.
 </details>
-
-<details><summary>Similarly, if we want to access the _function stored inside_
-the `getUsedUp` property, what can we write? </summary>
-we can write `crayon.getUsedUp`.
+<br />
+<details><summary>Similarly, if we want to access the <i>function stored inside</i>
+the <code>getUsedUp</code> property, what can we write? </summary>
+we can write <code>crayon.getUsedUp</code>.
 </details>
-
+<br />
 <details><summary>Lastly, if we want to
 treat that function as a method and invoke it from the object, what can we write?</summary>
 we can write
-`crayon.getUsedUp()`.
+<code>crayon.getUsedUp()</code>.
 </details>
-
+<br />
 
 Back to our car example. We have a method, `addMileage`, which adjusts the `mileage` property of our `car` object. Instead of using the object's name in the dot notation, we can use a special keyword that helps us alter properties of an object:
 

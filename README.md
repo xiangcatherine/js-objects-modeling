@@ -35,9 +35,23 @@ precipitation, 4 degree windchill...
 <!-- Stop & Jot -->
 Why do you think that might be?
 
+When you take something complex and then hide that complexity under a more simple interface, you are using a technique called **abstraction**. 
+
+From [wikipedia](https://en.wikipedia.org/wiki/Abstraction_(software_engineering)): In software engineering and computer science, abstraction is a technique for arranging complexity of computer systems. It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level.
+
 <!-- Think-Pair-Share -->
-How might abstraction and modeling be relevant as software developers? Take a
-minute and discuss this with your squad.
+
+<details>
+<summary>How might abstraction be relevant as software developers? Take a
+minute and discuss this with your squad.</summary>
+
+We can use abstraction to represent real-world entities when we write software. This allows us to hide complex systems underneath easy to grasp objects and models. 
+</details>
+
+
+Think about the weather report that you are given by the weather lady. She gives you the temperature in your city, if it's going to rain or snow, level of precipitation, and the wind speed. This model of the weather system hides the complexity that is behind these measurements. 
+
+A **model** is a simplified or partial representation of the real thing. Models are based on a real entity, and are used to represent the real entity in a system. Modeling is great for planning, designing, discussing, and understanding a system.
 
 ### Discussion
 
@@ -47,7 +61,7 @@ include in our model?
 
 As it turns out, the answer to that question depends heavily on what the
 application will do and how it will be used. If the application is for selling
-laptops, we might be pick attributes like sale price, brand, amount of RAM, disc
+laptops, we might pick attributes like sale price, brand, amount of RAM, disc
 space, and processor speed. However, if the application is for factories, e.g.
 tracking laptops as they're being manufactured, things like sale price are
 irrelevant; instead, we might want our model to include the production line
@@ -100,23 +114,33 @@ properties that hold functions, called _methods_, and these can stand in neatly
 for any behaviors that we might want our model to have.
 
 Suppose we needed to model a single crayon in JavaScript. We might come up with
-something like this.
+something like this:
 
 [Model a single crayon in JavaScript](lib/crayon.js)
 
 As you can see, `crayon` has two ordinary traits, (which we call properties),
 (`color` and `lengthInCM`); these map to attributes of the crayon that (presumably) are
-relevant to our application. In addition, it also has a method called `getUsedUp`, which corresponds with a behavior that real crayons exhibit - getting shorter as they get used.
+relevant to our application. In addition, it also has a method called `getUsedUp`, which corresponds with a behavior that real crayons exhibit: getting shorter as they get used.
 
--   Just as a refresher, if we want to access `crayon`'s `color` property, we can
-write `crayon.color`. Similarly, if we want to access the function stored inside
-the `getUsedUp` property, we can write `crayon.getUsedUp`. Lastly, if we want to
-treat that function as a method and invoke it from the object, we can write
+-   Let's do a quick refresher on object dot notation:
+<details><summary>What do we write if we want to access a `crayon`'s `color` property?</summary>
+we can
+write `crayon.color`.
+</details>
+
+<details><summary>Similarly, if we want to access the _function stored inside_
+the `getUsedUp` property, what can we write? </summary>
+we can write `crayon.getUsedUp`.
+</details>
+
+<details><summary>Lastly, if we want to
+treat that function as a method and invoke it from the object, what can we write?</summary>
+we can write
 `crayon.getUsedUp()`.
+</details>
 
-Back to our car example. Since we are altering the instance of our car object,
-we can use a keyword that helps us alter properties of an object without having
-to have the object name:
+
+Back to our car example. We have a method, `addMileage`, which adjusts the `mileage` property of our `car` object. Instead of using the object's name in the dot notation, we can use a special keyword that helps us alter properties of an object:
 
 [Model a car object](lib/car.js)
 
